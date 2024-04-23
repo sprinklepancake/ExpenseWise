@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customizable Reports</title>
+  <link rel="stylesheet" href="grp_sika.css">
+</head>
+
+<body>
+  <div class="report-container">
+    <h1>Generate Report</h1>
+    <form id="reportForm">
+      <label for="dateRange">Date Range:</label>
+      <select id="dateRange">
+        <option value="lastMonth">Last Week</option>
+        <option value="lastMonth">Last Month</option>
+        <option value="yearToDate">Last Year</option>
+      </select>
+
+      <label for="categoryFilter">Category Filter:</label>
+      <select id="categoryFilter" multiple onchange="toggleOtherCategoryField()">
+        <option value="food">Food</option>
+        <option value="transport">Transportation</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="others">Others</option>
+      </select>
+
+      <!-- Text input for specifying the 'Others' category -->
+      <div id="otherCategoryInput" style="display: none;">
+        <label for="otherCategory">Specify Other Category:</label>
+        <input type="text" id="otherCategory">
+      </div>
+
+      <label for="visualization">Visualization Type:</label>
+      <select id="visualization">
+        <option value="pieChart">Pie Chart</option>
+        <option value="barGraph">Bar Graph</option>
+      </select>
+
+      <button type="button" onclick="generateReport()">Generate Report</button>
+    </form>
+    <div id="reportOutput"></div>
+  </div><script src="grp_sika.js"></script>
+  
+  <script>
+      function toggleOtherCategoryField() {
+    var categorySelect = document.getElementById('categoryFilter');
+    var otherCategoryInput = document.getElementById('otherCategoryInput');
+    var isOthersSelected = Array.from(categorySelect.options)
+      .filter(option => option.value === 'others' && option.selected).length > 0;
+
+    // Show the input field if 'Others' is selected, otherwise hide it
+    otherCategoryInput.style.display = isOthersSelected ? 'block' : 'none';
+  }
+
+  // Include the function for 'Generate Report' button
+  function generateReport() {
+    // Example function to handle the report generation
+    console.log("Report generation logic goes here.");
+  }
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Setting and Tracking</title>
+    <link rel="stylesheet" href="grp_yara.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Goal Setting and Tracking</h1>
+        <div id="goal-form">
+            <form method="post" action="your_php_file.php" onsubmit="createGoal()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="total_expenses">Total Expenses:</label>
+                <input type="text" id="total_expenses" name="total_expenses">
+                <label for="budget">Budget:</label>
+                <input type="text" id="budget" name="budget">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="goal-details" style="display:none;">
+            <h2>Goal Details</h2>
+            <p id="goal-type-display"></p>
+            <p id="target-amount-display"></p>
+            <p id="target-date-display"></p>
+            <p id="monthly-savings"></p>
+        </div>
+    </div>
+    <script src="grp_yara.js"></script>
+
+</body>
+</html>

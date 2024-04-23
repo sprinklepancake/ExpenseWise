@@ -1,0 +1,121 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1em 2em;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffc107;
+}
+
+/* Hero section */
+/* Hero section */
+#hero {
+  background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.7)), url('background.jpg');
+  background-size: cover; /* This ensures the background image covers the entire element */
+  background-position: center; /* This centers the background image within the element */
+  background-repeat: no-repeat; /* This prevents the background image from repeating */
+  color: white;
+  text-align: center;
+  padding: 5em 2em;
+}
+
+
+.hero-content {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.hero-content p {
+  font-size: 1.5em;
+}
+
+/* Main section */
+main {
+  padding: 2em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 1.5em;
+}
+
+.feature {
+  margin-bottom: 3em;
+}
+
+.feature h3 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.feature p {
+  font-size: 1.2em;
+}
+
+/* Button styles */
+.button-container {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.button {
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 1em;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5em;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1em 2em;
+}
